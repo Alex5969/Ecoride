@@ -1,0 +1,113 @@
+body {
+    margin: 70px;
+    padding: 0;
+    font-family: "Barlow", sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .logo-container .logo {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  h3 {
+    text-align: center;
+    color: black;
+  }
+  
+  div {
+    color: black;
+    text-align: flex-start;;
+  }
+  
+  a {
+    color: #227752;
+  }
+  
+  ul {
+    background-color: white;
+    padding: 0;
+    margin: 20px 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .social li {
+    margin: 0 10px;
+  }
+  
+  .strong {
+    display: inline-block; /* Changed from flex */
+    text-align: left;
+    width: 80px;        /* Fixed width for alignment */
+  
+  }
+  .contact-info {
+    display: flex;          /* Use flexbox for each contact info line */
+    flex-direction: row;   /* Arrange items in a row */
+    justify-content: center;   /* Align horizontally towards the left */
+    align-items: baseline; /* Align vertically */
+    text-align: left;       /* Default text alignment for the paragraph */
+    margin-bottom: 5px;
+  }
+  .contact-info-container {
+  text-align: left;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .social {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .social li {
+      margin: 5px 0;
+    }
+    .contact-info {
+      flex-direction: column; /*Stack in column for small screens*/
+      align-items: flex-start; /* Align items to the start*/
+      text-align: left;      /* Keep text aligned to left */
+    }
+    .strong {
+      width: auto; /* Adjust width*/
+    }
+  
+  }

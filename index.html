@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page d'accueil - Covoiturage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER / MENU ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo">Ecoride</a>
+      </div>
+
+      <button class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+
+      <!-- Barre de recherche -->
+      <div class="search-container">
+        <div class="search-inputs">
+          <div class="input-group">
+            <label for="depart">Départ</label>
+            <input type="text" id="depart" placeholder="Départ">
+          </div>
+          <div class="input-group">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" placeholder="Destination">
+          </div>
+        </div>
+        <div class="search-options">
+          <div class="option-group">
+            <i class="fas fa-calendar-alt"></i>
+            <label>Aujourd'hui</label>
+          </div>
+        </div>
+        <button class="search-button">Rechercher</button>
+      </div>
+
+      <!-- Menu de navigation -->
+      <ul class="nav-links">
+        <li><a href="contact/contact.html">Contact</a></li>
+        <li><a href="connexion/connexion.html">Connexion</a></li>
+        <li><a href="inscription/inscription.html">Inscription</a></li>
+        <li><a href="trajets/trajets.html">Trajets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>N°1 des sites d'Écovoiturages</h1>
+        <p>réservez facilement vos trajets en 3 clics !</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation">
+    <h1>À propos de nous</h1>
+    <p>
+      Chez Ecoride, nous offrons une solution de covoiturage vert et pas cher. Notre mission est de réduire l'empreinte carbone en partageant les trajets de nos usagers, tout en les responsabilisant sur les enjeux de demain. Rejoignez-nous pour un avenir plus vert et des déplacements plus conviviaux..
+    </p>
+    <div class="images-container">
+      <img src="https://via.placeholder.com/300x200" alt="Image 1" />
+      <img src="https://via.placeholder.com/300x200" alt="Image 2" />
+      <img src="https://via.placeholder.com/300x200" alt="Image 3" />
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="securite">
+      <div class="securite-content">
+        <h2>La sécurité et le bien-être de nos clients</h2>
+        <p>Chez Ecoride, votre sécurité et confort sont notre priorité. Nos chauffeurs, rigoureusement sélectionnés,
+          assurent un service de qualité avec des véhicules modernes et bien entretenus. Des protocoles stricts
+          garantissent une expérience sereine et agréable.</p>
+      </div>
+    </section>
+
+    <section class="rapidite">
+      <div class="rapidite-content">
+        <h2>Rapidité et Efficacité de nos services</h2>
+        <p>Nous valorisons votre temps. Nos processus optimisés et notre technologie avancée vous offrent des
+          trajets rapides et ponctuels. Avec Ecoride, voyagez rapidement et en toute fluidité.</p>
+      </div>
+    </section>
+
+    <section class="ecoute">
+      <div class="ecoute-content">
+        <h2>L'écoute de nos clients</h2>
+        <p>Votre satisfaction est notre succès. Nous écoutons attentivement vos retours pour améliorer nos services.
+          Notre équipe est à votre disposition pour répondre à vos besoins et garantir une expérience agréable à
+          chaque trajet.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p class="pf">Contactez-nous:<a href="mailto:Ecoride-france@gmail.com"> Ecoride-france@gmail.com</a></p>
+    <p><a href="#">Mentions légales</a></p>
+    <p>©2025 Ecoride.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
