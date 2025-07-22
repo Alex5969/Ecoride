@@ -1,0 +1,566 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, 'Open Sans', Oxygen,  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(34, 119, 82);
+  padding: 0.5rem;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container .logo {
+  color: rgb(0,0,0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.search-container {
+  position: absolute;
+  top: 1%;
+  width: 80%;
+  background: rgb(255,255,255);
+  margin: 10%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.search-container input {
+  padding: 8px;
+  margin: 4px;
+  border: none;
+  border-radius: 50px;
+  height: 50%;
+  color: rgb(133, 133, 133);
+}
+
+.search-button {
+  background-color: rgb(34, 119, 82);
+  color: rgb(255,255,255);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-button:hover {
+  background-color: rgb(27, 93, 66);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: rgb(255,255,255);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid rgb(255,255,255);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255,255,255);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    margin:0 ;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(34, 119, 82);
+    position: absolute;
+    left: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .search-container {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .search-container input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+.hero {
+  background-image: url('https://placehold.co/1200x600/C0E0C0/2E7D32?text=EcoRide+Covoiturage');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255,255,255);
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+.services-section {
+  background-color: rgb(255,255,255);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: rgb(34, 119, 82);
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.icon-block {
+  background-color: rgb(255,255,255);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+.icon-block:hover {
+  transform: translateY(-10px);
+}
+
+.icon-block i {
+  color: rgb(34, 119, 82);
+  margin-bottom: 20px;
+}
+
+.icon-block h2 {
+  font-size: 1.5rem;
+  color: rgb(51, 51, 51);
+  margin-bottom: 15px;
+}
+
+.icon-block p {
+  color: rgb(85,85,85);
+  line-height: 1.7;
+}
+
+footer {
+  background-color: rgb(85,85,85);
+  color: rgb(255,255,255);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: rgb(34, 119, 82);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgb(0, 0, 0);
+}
+
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.success-message-container {
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 104, 48);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.error-message-container {
+    background-color: rgb(255, 255, 255);
+    color: rgb(166, 24, 38);
+    border: 1px solid rgb(255, 255, 255);
+}
+.error-message-inline {
+    color: rgb(166, 24, 38);
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.switch-form {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 5px;
+}
+
+.switch-form.active {
+    background-color: rgb(34, 119, 82);
+    color: rgb(255,255,255);
+}
+
+.login, .register {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+
+.login.active, .register.active {
+    display: flex;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="number"],
+.input-group input[type="date"],
+.input-group input[type="datetime-local"],
+.input-group select,
+.input-group textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: rgb(34, 119, 82);
+    box-shadow: 0 0 0 3px rgb(76, 175, 80);
+    outline: none;
+}
+
+button[type="submit"], .button {
+    background-color: rgb(34, 119, 82);
+    color: rgb(255,255,255);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+button[type="submit"]:hover, .button:hover {
+    background-color:  rgb(27, 93, 66);
+    transform: translateY(-2px);
+}
+
+.button.view-button {
+    background-color: rgb(34, 119, 82);
+}
+.button.view-button:hover {
+    background-color:  rgb(27, 93, 66);
+}
+
+.button.edit-button {
+    background-color: rgb(249,205,62);
+    color: rgb(85,85,85);
+}
+.button.edit-button:hover {
+    background-color: rgb(255, 193, 7);
+}
+
+.button.delete-button, .button.cancel-button {
+    background-color: rgb(211, 47 ,47);
+}
+.button.delete-button:hover, .button.cancel-button:hover {
+    background-color: rgb(166, 24, 38);
+}
+
+.button.complete-button {
+    background-color: rgb(34, 119, 82);
+}
+.button.complete-button:hover {
+    background-color: rgb(27, 93, 66);
+}
+
+.booking-actions button, .trip-actions button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: rgb(34, 119, 82);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+table th {
+    background-color: rgb(255, 255, 255);
+    color: rgb(85,85,85);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+table tr:hover {
+    background-color: rgb(85,85,85);
+}
+
+.profile-thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid rgb(133,133,133);
+        margin-bottom: 15px;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    white-space: nowrap; 
+    text-align: left;
+    font-weight: bold;
+}
+    td:nth-of-type(1):before { content: "ID"; }
+    td:nth-of-type(2):before { content: "Départ"; }
+    td:nth-of-type(3):before { content: "Arrivée"; }
+    td:nth-of-type(4):before { content: "Date"; }
+    td:nth-of-type(5):before { content: "Places"; }
+    td:nth-of-type(6):before { content: "Prix"; }
+    td:nth-of-type(7):before { content: "Conducteur"; }
+    td:nth-of-type(8):before { content: "Véhicule"; }
+    td:nth-of-type(9):before { content: "Écologique"; }
+    td:nth-of-type(10):before { content: "Actions"; }
+}
+
+.trip-details {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgb(0, 0, 0);
+    margin-top: 30px;
+}
+
+.trip-details h2 {
+    color: rgb(34, 119, 82);
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.detail-item {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.detail-item strong {
+    color: rgb(85, 85, 85);
+    display: inline-block;
+    width: 150px;
+}
+
+.trip-driver-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed rgb(133,133,133);
+}
+
+.trip-driver-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(34, 119, 82);
+}
+
+.trip-driver-info p {
+    margin: 0;
+    font-size: 1.1em;
+    color: rgb(85,85,85);
+}
+
+.booking-form {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed rgb(133,133,133);
+}
+
+.booking-form .input-group {
+    margin-bottom: 20px;
+}
+
+.booking-form button[type="submit"] {
+    width: auto;
+    padding: 12px 30px;
+    font-size: 1.2em;
+}

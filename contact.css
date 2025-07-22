@@ -1,0 +1,107 @@
+body {
+  margin: 70px;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.logo-container .logo {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+}
+
+div {
+  color: black;
+  text-align: flex-start;;
+}
+
+a {
+  color: #227752;
+}
+
+ul {
+  background-color: white;
+  padding: 0;
+  margin: 20px 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.social li {
+  margin: 0 10px;
+}
+
+.strong {
+  display: inline-block; 
+  text-align: left;
+  width: 80px;        
+
+}
+.contact-info {
+  display: flex;        
+  flex-direction: row;   
+  justify-content: center;   
+  align-items: baseline; 
+  text-align: left;       
+  margin-bottom: 5px;
+}
+.contact-info-container {
+text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .social {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .strong {
+    width: auto; 
+  }
+
+}
